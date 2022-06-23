@@ -37,8 +37,16 @@ router.get('/alltweets', async function(req, res, next){
 // Récupération des tweets en fonction d'un auteur
 router.get('/tweets/:authorName', async function(req, res, next){
 
+
   let authorTweets = await tweetModel.find({authorName: req.params.authorName})
 
-  res.json({result: true, authorTweets})
+  let result = false
+  let error ="";
+  if (authorTweets.length > 0){
+    result = true
+  } else {
+    error="Auteur pas trouvé !"
+  }
+  res.json({result, error, authorTweets})
 })
 module.exports = router;
