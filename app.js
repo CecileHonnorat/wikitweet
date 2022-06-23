@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(express.static(path.join(__dirname, 'reactapp/build')));
+app.use(express.static(path.join(__dirname, 'front-wikitweet/build')));
 
 module.exports = app;
