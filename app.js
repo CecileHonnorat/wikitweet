@@ -1,5 +1,8 @@
 require('dotenv').config();
 require('./models/connection');
+const Server = require('./models/server');
+const server = new Server();
+server.listen();
 
 var express = require('express');
 var path = require('path');
