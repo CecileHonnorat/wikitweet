@@ -8,10 +8,10 @@
   "scripts": {
     "start": "node app",
     "server": "nodemon",
-    "client": "npm start --prefix front-wikitweet",
-    "dev": "concurrently \"npm run server\" \"npm run front-wikitweet\"",
-    "build": "npm run build --prefix front-wikitweet",
-    "heroku-postbuild": "cd front-wikitweet && npm install && npm run build"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

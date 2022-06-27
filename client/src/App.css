@@ -1,0 +1,85 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f6fdff;
+}
+h1{
+  color: #03256C;
+}
+h6{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px;
+}
+.envoyerTweet{
+  background-color: #1768AC;
+  color: white;
+  border: none;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+button:hover{
+  cursor: pointer;
+  opacity: 0.55;
+}
+.tweetCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+  border: 0.5px solid #03256C;
+  width: 60%;
+}
+.tweetCard:hover{
+  background-color: #dff9ff;
+}
+.avatar {
+  width: 55px;
+  margin: 10px;
+}
+.content{
+  margin: 10px
+}
+.date {
+  margin-top:15px;
+  color: #1768AC;
+}
+.tweetInfo{
+  display: flex;
+  align-items: center;
+  margin-bottom: -15px;
+}
+.formTweet{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.nameInput{
+  margin: 5px;
+  border: 0.5px solid grey
+}
+.tweetInput{
+  margin: 5px;
+  border: 0.5px solid grey
+}
+.chercherTweet{
+  background-color: #1768AC;
+  color: white;
+  border: none;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 10px;
+}
