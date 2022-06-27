@@ -6,9 +6,11 @@
   },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "build": " webpack --config webpack.conf.js",
-    "heroku-postbuild": "cd front-wikitweet && npm install && npm run build"
+    "start": "node app",
+    "server": "nodemon",
+    "client": "npm start --prefix front-wikitweet",
+    "dev": "concurrently \"npm run server\" \"npm run front-wikitweet\"",
+    "build": "npm run build --prefix front-wikitweet"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -18,5 +20,8 @@
     "mongoose": "^6.4.0",
     "morgan": "~1.9.1",
     "sync-request": "^6.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2"
   }
 }
