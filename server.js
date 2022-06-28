@@ -22,7 +22,7 @@ class Server {
 
     // Pick up React index.html file
     this.app.use(
-      express.static(path.join(__dirname, "../client/public/"))
+      express.static(path.join(__dirname, "../client/"))
     );
   }
 
