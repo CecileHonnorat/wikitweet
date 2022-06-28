@@ -1,6 +1,6 @@
 require('dotenv').config();
 require('./models/connection');
-const Server = require('./models/server');
+const Server = require('./server');
 const server = new Server();
 server.listen();
 
@@ -22,6 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 module.exports = app;
