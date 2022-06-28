@@ -22,14 +22,13 @@ class Server {
 
     // Pick up React index.html file
     this.app.use(
-      express.static(path.join(__dirname, "../client/build"))
+      express.static(path.join(__dirname, "../client/"))
     );
   }
 
   // Bind controllers to routes
   routes() {
-    this.app.use(this.paths.auth, require("../routes/auth"));
-    this.app.use(this.paths.homepage, require("../routes/homepage"));
+    this.app.use(this.paths.homepage, require("../routes/index"));
     // Catch all requests that don't match any route
     this.app.get("*", (req, res) => {
       res.sendFile(
